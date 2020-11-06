@@ -36,6 +36,5 @@ static unsigned int lineheight = 22;   /* -h option; minimum height of a menu li
  * for example: " /?\"&[]"
  */
 static const char worddelimiters[] = " ";
-static const char *dynamic = NULL;  /* -dy option; dynamic command to run on input change */
 /* Size of the window border */
 static unsigned int border_width = 0;  /* -bw option; to add border width */

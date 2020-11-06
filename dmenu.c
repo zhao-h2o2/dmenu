@@ -374,36 +374,12 @@ fuzzymatch(void)
 	calcoffsets();
 }
 
-
-static void readstdin(FILE* stream);
-
-static void
-refreshoptions(){
-	int dynlen = strlen(dynamic);
-	char* cmd= malloc(dynlen + strlen(text)+2);
-	if(cmd == NULL)
-		die("malloc:");
-	sprintf(cmd,"%s %s",dynamic, text);
-	FILE *stream = popen(cmd, "r");
-	if(!stream)
-		die("popen(%s):",cmd);
-	readstdin(stream);
-	int pc = pclose(stream);
-	if(pc == -1)
-		die("pclose:");
-	free(cmd);
-	curr = sel = items;
-}
-
 static void
 match(void)
 {
 	if (fuzzy) {
 		fuzzymatch();
 		return;
-	}
-	if(dynamic && *dynamic){
-		refreshoptions();
 	}
 
 	static char **tokv = NULL;
@@ -427,7 +403,7 @@ match(void)
 		for (i = 0; i < tokc; i++)
 			if (!fstrstr(item->text, tokv[i]))
 				break;
-		if (i != tokc && !(dynamic && *dynamic)) /* not all tokens match */
+		if (i != tokc) /* not all tokens match */
 			continue;
 		/* exact matches go first, then prefixes, then substrings */
 		if (!tokc || !fstrncmp(text, item->text, textsize))
@@ -850,8 +826,7 @@ readstdin(FILE* stream)
 	if (items)
 		items[i].text = NULL;
 	inputw = items ? TEXTW(items[imax].text) : 0;
-	if (!dynamic || !*dynamic)
-		lines = MIN(lines, i);
+	lines = MIN(lines, i);
 }
 
 static void
@@ -1084,8 +1059,6 @@ main(int argc, char *argv[])
 			embed = argv[++i];
 		else if (!strcmp(argv[i], "-bw"))
 			border_width = atoi(argv[++i]); /* border width */
-		else if (!strcmp(argv[i], "-dy"))  /* dynamic command to run */
-			dynamic = argv[++i];
 		else
 			usage();
 
@@ -1112,11 +1085,9 @@ main(int argc, char *argv[])
 
 	if (fast && !isatty(0)) {
 		grabkeyboard();
-		if(!(dynamic && *dynamic))
-			readstdin(stdin);
+		readstdin(stdin);
 	} else {
-		if(!(dynamic && *dynamic))
-			readstdin(stdin);
+		readstdin(stdin);
 		grabkeyboard();
 	}
 	setup();
