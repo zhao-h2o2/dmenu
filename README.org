@@ -28,9 +28,20 @@ dmenu-distroube is my personal build of dmenu that is very heavily patched to ad
 + dmenu-mousesupport-5.0.diff
 + dmenu-numbers-4.9.diff
 * Available flags
-[-l lines] [-p prompt] [-fn font] [-m monitor]
-[-h height] [-nb color] [-nf color] [-sb color] [-sf color]
-[-nhb color] [-nhf color] [-shb color] [-shf color] [-w windowid]
++ [-l lines]
++ [-p prompt]
++ [-fn font]
++ [-m monitor]
++ [-h height]
++ [-nb color]
++ [-nf color]
++ [-sb color]
++ [-sf color]
++ [-nhb color]
++ [-nhf color]
++ [-shb color]
++ [-shf color]
++ [-w windowid]
 
 An example: dmenu_run -c -bw 2 -l 20 -g 4
 
@@ -39,4 +50,4 @@ This launches dmenu_run with -c (centered), -bw (border width), -l (number of ve
 * How to install dmenu-distrotube
 To install dmenu-distrotube on most Linux systems, simply clone this repository, then cd into the cloned directory, and finally run a =sudo make install=.
 
-For those that use Arch Linux (btw), you can install dmenu-distrotube-git from the AUR.  If you use yay: yay -S dmenu-distrotube-git
+For those that use Arch Linux (btw), you can install dmenu-distrotube-git from the AUR.  If you use yay: =yay -S dmenu-distrotube-git=
