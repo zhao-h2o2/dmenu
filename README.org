@@ -33,6 +33,7 @@ dmenu-distroube is my personal build of dmenu that is very heavily patched to ad
 [-nhb color] [-nhf color] [-shb color] [-shf color] [-w windowid]
 
 An example: dmenu_run -c -bw 2 -l 20 -g 4
+
 This launches dmenu_run with -c (centered), -bw (border width), -l (number of vertical lines) and -g (number of grid columns).
 
 * How to install dmenu-distrotube
