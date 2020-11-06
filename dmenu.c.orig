@@ -1023,7 +1023,7 @@ setup(void)
 static void
 usage(void)
 {
-	fputs("usage: dmenu [-bfinv] [-bfiv] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
+	fputs("usage: dmenu [-bfinv] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
 	      "             [-h height] [-nb color] [-nf color] [-sb color] [-sf color]\n"
 	      "             [-nhb color] [-nhf color] [-shb color] [-shf color] [-w windowid]\n",
 stderr);
@@ -1091,6 +1091,8 @@ main(int argc, char *argv[])
 			colors[SchemeSelHighlight][ColFg] = argv[++i];
 		else if (!strcmp(argv[i], "-w"))   /* embedding window id */
 			embed = argv[++i];
+		else if (!strcmp(argv[i], "-bw"))
+			border_width = atoi(argv[++i]); /* border width */
 		else if (!strcmp(argv[i], "-dy"))  /* dynamic command to run */
 			dynamic = argv[++i];
 		else
