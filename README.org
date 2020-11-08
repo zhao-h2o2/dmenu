@@ -22,16 +22,14 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large num
 * What is dmenu-distrotube
 dmenu-distroube is my personal build of dmenu that is very heavily patched to add more functionality and more customization options.  The patches that I used in this build include:
 + dmenu-border -- adds border around dmenu window
-+ dmenu-caseinsensitive -- case insesitive search
 + dmenu-center -- centers dmenu in the middle of screen (-c)
 + dmenu-fuzzyhighlight -- fuzzy matches gets highlighted
 + dmenu-fuzzymatch -- adds support for fuzzy-matching
 + dmenu-grid -- adds a flag (-g) to specify the number of grid columns
-+ dmenu-highlight -- highlights the individual characters of matched text
 + dmenu-lineheight -- adds a flag (-h) to set the minimum height of dmenu lines
 + dmenu-morecolor -- creates a color option for use the entries adjacent to the selection
 + dmenu-mousesupport -- basic mouse support
-+ dmenu-numbers --
++ dmenu-numbers -- Displays number of matched and total items in top right corner
 * Mouse functionality
 Mouse actions supported:
 ** Left-mouse click:
@@ -59,10 +57,6 @@ Mouse actions supported:
 + [-nf color]
 + [-sb color]
 + [-sf color]
-+ [-nhb color]
-+ [-nhf color]
-+ [-shb color]
-+ [-shf color]
 + [-w windowid]
 
 An example: dmenu_run -c -bw 2 -l 20 -g 4
