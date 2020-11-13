@@ -4,12 +4,6 @@
 - [[#what-is-dmenu][What is dmenu?]]
 - [[#what-is-dmenu-distrotube][What is dmenu-distrotube]]
 - [[#mouse-functionality][Mouse functionality]]
-  - [[#left-mouse-click][Left-mouse click:]]
-  - [[#ctrl-left-mouse-click-multisel-modifier][Ctrl-left-mouse click: multisel modifier.]]
-  - [[#right-mouse-click-close][Right-mouse click: close.]]
-  - [[#middle-mouse-click][Middle-mouse click:]]
-  - [[#scroll-up][Scroll up:]]
-  - [[#scroll-down][Scroll down:]]
 - [[#available-flags][Available flags]]
 - [[#how-to-install-dmenu-distrotube][How to install dmenu-distrotube]]
 
@@ -32,21 +26,21 @@ dmenu-distroube is my personal build of dmenu that is very heavily patched to ad
 + dmenu-numbers -- Displays number of matched and total items in top right corner
 * Mouse functionality
 Mouse actions supported:
-** Left-mouse click:
-+ On prompt and input field: clear input text and selection.
-+ In horizontal and vertical mode on item: select and output item (same as pressing enter).
-+ In horizontal mode on arrows: change items to show left or right.
-** Ctrl-left-mouse click: multisel modifier.
-** Right-mouse click: close.
-** Middle-mouse click:
-+ Paste current selection.
-+ While holding shift: paste primary selection.
-** Scroll up:
-+ In horizontal mode: same as left-clicking on left arrow.
-+ In vertical mode: show items above.
-** Scroll down:
-+ In horizontal mode: same as left-clicking on right arrow.
-+ In vertical mode: show items below.
++ Left-mouse click:
+  - On prompt and input field: clear input text and selection.
+  - In horizontal and vertical mode on item: select and output item (same as pressing enter).
+  - In horizontal mode on arrows: change items to show left or right.
++ Ctrl-left-mouse click: multisel modifier.
++ Right-mouse click: close.
++ Middle-mouse click:
+  - Paste current selection.
+  - While holding shift: paste primary selection.
++ Scroll up:
+  - In horizontal mode: same as left-clicking on left arrow.
+  - In vertical mode: show items above.
++ Scroll down:
+  - In horizontal mode: same as left-clicking on right arrow.
+  - In vertical mode: show items below.
 * Available flags
 + [-l lines]
 + [-g columns]
