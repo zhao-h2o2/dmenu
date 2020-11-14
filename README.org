@@ -65,12 +65,15 @@ An example: dmenu_run -c -bw 2 -l 20 -g 4 -p 'Run: '
 This launches dmenu_run with -c (centered), -bw (border width), -l (number of vertical lines) and -g (number of grid columns).
 * Installing dmenu-distrotube on Arch Linux
 All you need to do is to download the PKGBUILD from this repository.  Then run the following command:
+
 =makepkg -cf=
 
 This will create a file that ends in .pkg.tar.xz (for example, dmenu-distrotube-git-5.0-1-x86_64.pkg.tar.xz).  Then run:
+
 =sudo pacman -U *.pkg.tar.xz=
 
 Alternately, you could also install dmenu-distrotube-git from the AUR using an AUR helper such as yay:
+
 =yay -S dmenu-distrotube-git=
 
 =NOTE:= Installing dmenu-distrotube-git conflicts with the standard dmenu package.  If you already have dmenu installed, you will be asked if you want to remove dmenu and install dmenu-distrotube-git instead.
