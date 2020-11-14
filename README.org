@@ -5,7 +5,8 @@
 - [[#what-is-dmenu-distrotube][What is dmenu-distrotube]]
 - [[#mouse-functionality][Mouse functionality]]
 - [[#available-flags][Available flags]]
-- [[#how-to-install-dmenu-distrotube][How to install dmenu-distrotube]]
+- [[#installing-dmenu-distrotube-on-arch-linux][Installing dmenu-distrotube on Arch Linux]]
+- [[#installing-dmenu-distrotube-on-other-linux-distributions][Installing dmenu-distrotube on other Linux distributions]]
 
 * What is dmenu?
 #+CAPTION: dmenu-distrotube
@@ -62,7 +63,23 @@ Mouse actions supported:
 An example: dmenu_run -c -bw 2 -l 20 -g 4 -p 'Run: '
 
 This launches dmenu_run with -c (centered), -bw (border width), -l (number of vertical lines) and -g (number of grid columns).
-* How to install dmenu-distrotube
-To install dmenu-distrotube on most Linux systems, simply clone this repository, then cd into the cloned directory, and finally run a =sudo make install=.
+* Installing dmenu-distrotube on Arch Linux
+All you need to do is to download the PKGBUILD from this repository.  Then run the following command:
+=makepkg -cf=
 
-For those that use Arch Linux (btw), you can install dmenu-distrotube-git from the AUR.  If you use yay: =yay -S dmenu-distrotube-git=
+This will create a file that ends in .pkg.tar.xz (for example, dmenu-distrotube-git-5.0-1-x86_64.pkg.tar.xz).  Then run:
+=sudo pacman -U *.pkg.tar.xz=
+
+Alternately, you could also install dmenu-distrotube-git from the AUR using an AUR helper such as yay:
+=yay -S dmenu-distrotube-git=
+
+=NOTE:= Installing dmenu-distrotube-git conflicts with the standard dmenu package.  If you already have dmenu installed, you will be asked if you want to remove dmenu and install dmenu-distrotube-git instead.
+
+* Installing dmenu-distrotube on other Linux distributions
+Download the source code from this repository or use a git clone:
+
++ git clone https://gitlab.com/dwt1/dmenu-distrotube.git
++ cd dmenu-distrotube
++ sudo make clean install
+
+=NOTE:= Installing dmenu-distrotube will overwrite your existing dmenu installation so make a backup of your current config if you need it.
