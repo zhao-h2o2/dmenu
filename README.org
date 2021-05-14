@@ -72,9 +72,9 @@ All you need to do is to download the PKGBUILD from this repository.  Then run t
 
 =makepkg -cf=
 
-This will create a file that ends in .pkg.tar.xz (for example, dmenu-distrotube-git-5.0-1-x86_64.pkg.tar.xz).  Then run:
+This will create a file that ends in .pkg.tar.zst (for example, dmenu-distrotube-git-5.0-1-x86_64.pkg.tar.zst).  Then run:
 
-=sudo pacman -U *.pkg.tar.xz=
+=sudo pacman -U *.pkg.tar.zst=
 
 Alternatively, you could also install dmenu-distrotube-git from my own personal Arch repository.  To do so, add the following to the end of /etc/pacman.conf :
 
