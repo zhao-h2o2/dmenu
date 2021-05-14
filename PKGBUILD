@@ -1,10 +1,10 @@
 # Maintainer: Derek Taylor <derek@distrotube.com>
 pkgname=dmenu-distrotube-git
-pkgver=5.0
+pkgver=5.0.r22.8695f74
 pkgrel=1
 epoch=
 pkgdesc="A build of dmenu patched for centering, borders, grids, numbers, line height, mouse support, fuzzy matching and highlighting."
-arch=(x86_64 i686)
+arch=(x86_64)
 url="https://www.gitlab.com/dwt1/dmenu-distrotube.git"
 license=('MIT')
 groups=()
