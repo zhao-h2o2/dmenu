@@ -1,0 +1,5 @@
+
+post_install() {
+    echo -e "\n** dmenu-distrotube has been installed! **"
+    echo -e "\n** The source code can be found in /opt/dmenu-distrotube **\n"
+}
