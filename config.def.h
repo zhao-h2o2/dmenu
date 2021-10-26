@@ -17,15 +17,22 @@ static const char *fonts[] = {
 	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
-static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#cccccc", "#282a36" },
-	[SchemeSel] = { "#ffffff", "#74438f" },
-	[SchemeSelHighlight] = { "#d7d7d7", "#000000" },
-	[SchemeNormHighlight] = { "#a5bdf8", "#000000" },
-	[SchemeOut] = { "#000000", "#00ffff" },
-	[SchemeMid] = { "#d7d7d7", "#1f2026" },
-};
+
+/*
+ * SELECT YOUR COLOR SCHEME
+ * Available themes are:
+ * 1. doom-one.h
+ * 2. dracula.h
+ * 3. gruvbox-dark.h
+ * 4. monokai-pro.h
+ * 5. nord.h
+ * 6. oceanic-next.h
+ * 7. solarized-dark.h
+ * 8. solarized-light.h
+ * 9. tomorrow-night.h
+ */
+#include "/home/dt/gitlab-repos/dmenu-distrotube/colors/tomorrow-night.h"
+
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
 static unsigned int lineheight = 22;  /* -h option; minimum height of a menu line */
