@@ -95,8 +95,8 @@ And, then:
 * Installing dmenu-distrotube on other Linux distributions
 Download the source code from this repository or use a git clone:
 
-+ git clone https://gitlab.com/dwt1/dmenu-distrotube.git
-+ cd dmenu-distrotube
++ sudo git clone https://gitlab.com/dwt1/dmenu-distrotube.git /opt/dmenu-distrotube
++ cd /opt/dmenu-distrotube
 + sudo make clean install
 
 =NOTE:= Installing dmenu-distrotube will overwrite your existing dmenu installation so make a backup of your current config if you need it.
