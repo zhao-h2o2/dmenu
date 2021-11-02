@@ -76,19 +76,24 @@ This will create a file that ends in .pkg.tar.zst (for example, dmenu-distrotube
 
 =sudo pacman -U *.pkg.tar.zst=
 
-Alternatively, you could also install dmenu-distrotube-git from my own personal Arch repository.  To do so, add the following to the end of /etc/pacman.conf :
+Alternatively, you could also install dmenu-distrotube from my own DTOS core repository.  To do so, add the following to the end of /etc/pacman.conf :
 
 #+begin_example
-[dt-arch-repo]
-SigLevel = Optional DatabaseOptional
-Server = https://gitlab.com/dwt1/$repo/-/raw/master/$arch
+[dtos-core-repo]
+SigLevel = Required DatabaseOptional
+Server = https://gitlab.com/dwt1/$repo/-/raw/main/$arch
 #+end_example
 
 Then, sync the repositories and update your system with:
 =sudo pacman -Syyu=
 
+=NOTE:= Pacman will complain about importing a PGP key that is either invalid or corrupted.  The problem can be fixed by locally signing the imported key:
+#+begin_example
+sudo pacman-key --lsign-key C71486C31555B12E
+#+end_example
+
 And, then:
-=sudo pacman -S dmenu-distrotube-git=
+=sudo pacman -S dmenu-distrotube=
 
 =NOTE:= Installing dmenu-distrotube-git conflicts with the standard dmenu package.  If you already have dmenu installed, you will be asked if you want to remove dmenu and install dmenu-distrotube-git instead.
 
@@ -97,6 +102,6 @@ Download the source code from this repository or use a git clone:
 
 + sudo git clone https://gitlab.com/dwt1/dmenu-distrotube.git /opt/dmenu-distrotube
 + cd /opt/dmenu-distrotube
-+ sudo make clean install
++ sudo make clean install && sudo rm config.h
 
 =NOTE:= Installing dmenu-distrotube will overwrite your existing dmenu installation so make a backup of your current config if you need it.
