@@ -31,7 +31,7 @@ static const char *prompt      = NULL;      /* -p  option; prompt to the left of
  * 8. solarized-light.h
  * 9. tomorrow-night.h
  */
-#include "colors/doom-one.h"
+#include "colors/nord.h"
 
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
