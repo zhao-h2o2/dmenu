@@ -13,8 +13,8 @@ static int min_width = 600;  /* minimum width when centered */
 static int fuzzy = 1;        /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Hack:pixelsize=11:antialias=true:autohint=true",
-	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
+	"JetBrains Nerd Font Mono:pixelsize=14:antialias=true:autohint=true",
+	"JoyPixels:pixelsize=12:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 
